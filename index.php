@@ -18,6 +18,8 @@
 
         $player1->informacion();
 
+        $player2 = new player();
+        $player2->informacion();
     ?>
 </body>
 </html>
