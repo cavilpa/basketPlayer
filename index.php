@@ -12,8 +12,11 @@
 
         $player1 = new player();
 
-        $player1->informacion();
+        $player1->setNombre('Juan');
+        $player1->setDorsal(17);
+        $player1->setEdad(25);
 
+        $player1->informacion();
 
     ?>
 </body>
