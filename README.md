@@ -1,2 +1,2 @@
 # basketPlayer
- Clase de jugador de baloncesto
+ Creacion de una clase para jugadores de baloncesto
