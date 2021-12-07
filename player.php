@@ -68,7 +68,7 @@ class player
     }
 
     public function informacion(){
-        echo '<br> <p>Nombre: ' . self::getNombre() . '</p><p>Dorsal: ' . self::getDorsal() .  '</p><p> Edad: ' . self::getEdad() . '</p><br>';
+        echo '<br> <p>Nombre: ' . self::getNombre() . '</p><p>Dorsal: ' . self::getDorsal() .  '</p><p> Edad: ' . self::getEdad() . '</p>';
         
     }
     //Gracias a self::function()    
@@ -76,10 +76,19 @@ class player
 
     public function mayor($_num){
         if ($_num >18) {
-            echo 'El jugador es menor de edad ';
+            echo '<br>El jugador es menor de edad ';
         }else {
-            echo'Es mayor de edad';
+            echo'<br>El jugador es mayor de edad ';
         }
+    }
+    //Asi es como creo que tendria mas sentido, comprobando el atributo del jugador
+    public function mayor2(){
+        if (self::getEdad()<18) {
+            echo'<br>El jugador' . self::getNombre() . '  es menor de edad';
+        } else {
+            echo'<br>El jugador ' . self::getNombre() . ' es mayor de edad';
+        }
+        
     }
 }
 
