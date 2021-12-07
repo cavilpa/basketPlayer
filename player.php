@@ -1,44 +1,16 @@
 <?php
 class player
 {
-    $nombre;
-    $dorsal;
-    $edad;
-
-
+    private $nombre;
+    private $dorsal;
+    private $edad;
     function __constructor (){
-        $this->nombre='Nombre sin especificar'
-        $this->edad='edad sin especificar'
-        $this->dorsal='dorsal sin especificar'
+        
+        $this->nombre='Nombre sin especificar';
+        $this->edad='edad sin especificar';
+        $this->dorsal='dorsal sin especificar';
 
     }
-
-    function __constructor($_nombre,$_edad,$_dorsal){
-        $this->nombre = $_nombre;
-        $this->edad = $edad;
-        $this->dorsal = $_dorsal;
-    }
-
-    function informacion(){
-        return(echo'
-        <br> 
-        <p>Nombre: <p>' . $player->getNombre() . 
-        '<br><p>Dorsal: ' . $player->getDorsal() . 
-        '</p><br><p> Edad: ' . $player->getEdad() . '</p>
-        <br>');
-    }
-
-    function mayor($_num){
-        if ($num >18) {
-            echo 'El jugador es menor de edad ';
-        }else {
-            echo'Es mayor de edad';
-        }
-    }
-
-
-
-
     /**
      * Get the value of nombre
      */ 
@@ -97,6 +69,21 @@ class player
         $this->edad = $edad;
 
         return $this;
+    }
+
+    function informacion(){
+        echo '<br> <p>Nombre: ' . self::getNombre() . '</p><p>Dorsal: ' . self::getDorsal() .  '</p><p> Edad: ' . self::getEdad() . '</p><br>';
+        
+    }
+    //Gracias a self::function()    
+    //Puedes llamar a una funcion dentro de la misma clase, de otra manera da error
+
+    function mayor($_num){
+        if ($_num >18) {
+            echo 'El jugador es menor de edad ';
+        }else {
+            echo'Es mayor de edad';
+        }
     }
 }
 
