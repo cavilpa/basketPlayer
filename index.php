@@ -20,6 +20,12 @@
 
         $player2 = new player();
         $player2->informacion();
+
+        $player1->mayor(17);
+        $player1->mayor(19);
+        
+        $player1->mayor2();
+        
     ?>
 </body>
 </html>
